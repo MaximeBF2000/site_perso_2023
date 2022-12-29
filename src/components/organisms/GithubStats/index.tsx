@@ -22,6 +22,9 @@ export const GithubStats: React.FC<Props> = ({ className }) => {
   useEffect(() => {
     async function getGithubData() {
       const repos = await getRepos()
+
+      console.log({ repos })
+
       const totalLines = await getCodeLines(repos)
       const numberOfCommits = await getTotalNumberOfCommits(repos)
 

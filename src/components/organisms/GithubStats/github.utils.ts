@@ -13,7 +13,7 @@ const getNumbersOfCommitsByRepo = async (repositoryName: string) => {
   return (commits?.length || 0) as number
 }
 
-export const getTotalNumberOfCommits = async (repositories: any[]) => {
+export const getTotalNumberOfCommits = async (repositories: any[] = []) => {
   const commitsByRepo = await Promise.all(
     repositories.map(repo => getNumbersOfCommitsByRepo(repo.full_name))
   )
@@ -43,7 +43,7 @@ const getCodeLinesByRepo = async (repositoryName: string) => {
   return lines
 }
 
-export const getCodeLines = async (repositories: any[]) => {
+export const getCodeLines = async (repositories: any[] = []) => {
   const linesByRepo = await Promise.all(
     repositories.map(repo => getCodeLinesByRepo(repo.full_name))
   )
