@@ -1,0 +1,11 @@
+{
+  "global": {
+    "firstname": "Maxime",
+    "lastname": "Ferret",
+    "role": "Fullstack web developer"
+  },
+  "socials": {
+    "github": "https://github.com/MaximeBF2000",
+    "linkedin": "https://www.linkedin.com/in/maximebounaasferret/"
+  }
+}
